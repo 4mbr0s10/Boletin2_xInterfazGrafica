@@ -1,0 +1,75 @@
+
+package boletin2_x;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author dam1
+ */
+public class Metodos {
+
+    public static float areaTriangulo(float area) {
+       
+        float base = 4f;
+        float altura = 3f;
+
+        area = base * altura / 2;
+JOptionPane.showMessageDialog(null, "Área de triángulo: "+area);
+        return area;
+
+    }
+
+    public static float areaCuadrado(float area) {
+        String auxLado=JOptionPane.showInputDialog(null, "Introduzca o valor do lado do cadrado: ");
+        float lado =Float.parseFloat(auxLado) ;
+        area = (float) Math.pow(lado, 2);
+JOptionPane.showMessageDialog(null, "Área do cadrado: "+area);
+        return area;
+    }
+
+    public static float cambioDollar(float cambio) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+       String auxValorDollar= JOptionPane.showInputDialog(null, "Introduzca o valor do Dollar con respecto ó euro: ");
+        
+        float dollar = Float.parseFloat(auxValorDollar);
+        String auxEuros=JOptionPane.showInputDialog(null, "Introduzca a cantidade de euros que desexa cambiar: ");
+         
+        float euros = Float.parseFloat(auxEuros);
+        cambio = euros * dollar;
+        JOptionPane.showMessageDialog(null, "O cambio queda en: "+cambio);
+
+        return cambio;
+    }
+
+    public static float operaciones(float resultado) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        Operaciones op = new Operaciones(0, 0);
+       String auxNum= JOptionPane.showInputDialog(null, "Introduzca un número: ");
+        op.setNum1(Float.parseFloat(auxNum));
+        String auxNum2=JOptionPane.showInputDialog(null, "Introduzca outro número: ");
+        op.setNum2(Float.parseFloat(auxNum2));
+        JOptionPane.showMessageDialog(null, "A suma é: "+op.operacionSuma(resultado));
+        JOptionPane.showMessageDialog(null, "O resultado da resta é: "+op.operacionResta(resultado));
+       JOptionPane.showMessageDialog(null, "O resultado da multiplicación é: "+op.operacionProducto(resultado));
+        JOptionPane.showMessageDialog(null, "O resultado da división é: "+op.operacionCociente(resultado));
+        return resultado;
+
+    }
+
+// 
+    public static long metroMilla(long conversion) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        long metro = 1852;
+       String auxMillas=JOptionPane.showInputDialog(null, "Introduzca un número: ");
+        long millas = Long.parseLong(auxMillas);
+        conversion = millas * metro;
+        JOptionPane.showMessageDialog(null, "O resultado da conversión é: "+conversion);
+
+        return conversion;
+    }
+
+}
