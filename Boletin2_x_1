@@ -1,0 +1,19 @@
+
+package boletin2_x;
+
+import java.io.IOException;
+
+/**
+ *
+ * @author dam1
+ */
+public class Boletin2_x {
+
+
+    public static void main(String[] args) throws IOException {
+       
+        
+        Menu.menu();
+    }
+    
+}
