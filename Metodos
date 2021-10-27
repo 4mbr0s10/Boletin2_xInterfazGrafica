@@ -13,9 +13,10 @@ import javax.swing.JOptionPane;
 public class Metodos {
 
     public static float areaTriangulo(float area) {
-       
-        float base = 4f;
-        float altura = 3f;
+       String auxBase=JOptionPane.showInputDialog(null, "Introduzca o valor da base do triangulo: ");
+        float base =Float.parseFloat(auxBase);
+        String auxAltura=JOptionPane.showInputDialog(null, "Introduzca o valor da altura do triangulo: ");
+        float altura =Float.parseFloat(auxAltura);
 
         area = base * altura / 2;
 JOptionPane.showMessageDialog(null, "Área de triángulo: "+area);
