@@ -1,0 +1,57 @@
+
+package boletin2_x;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import javax.swing.JOptionPane;
+import java.util.Arrays;
+/**
+ *
+ * @author dam1
+ */
+public class Menu {
+
+    public static void menu() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int o;
+        
+        
+     String prueba="";
+           
+                   
+            do{
+                 Object opciones [] = {"Area Triángulo", "Area cadrado", "Dollar/euros", "Operaciones", "Millas/Metros"};
+          Object entrada= JOptionPane.showInputDialog(null, "Seleccione una acción", "Hacer", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones [0] );
+        prueba = (String) entrada;
+                
+                switch(prueba){
+                    case "Area Triángulo":
+                       Metodos.areaTriangulo(0);
+ 
+                        break;
+                case "Area cadrado":
+                    Metodos.areaCuadrado(0);
+                    
+                    break;
+                case "Dollar/euros":
+                    Metodos.cambioDollar(0);
+                    break;
+                case "Operaciones":
+                       Metodos.operaciones(0);
+                    break;
+                case "Millas/Metros":
+                   Metodos.metroMilla(0);
+                    break;
+                    
+                    
+                }
+                
+                
+                
+                
+            }while (prueba.equalsIgnoreCase("Area Triángulo") || prueba.equalsIgnoreCase("Área cadrado") 
+                    || prueba.equalsIgnoreCase("Dollar/euros") ||prueba.equalsIgnoreCase("Operaciones") ||
+                    prueba.equalsIgnoreCase("Millas/Metros"));
+    }      
+}
