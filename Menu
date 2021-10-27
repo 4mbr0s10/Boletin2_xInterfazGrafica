@@ -50,7 +50,7 @@ public class Menu {
                 
                 
                 
-            }while (prueba.equalsIgnoreCase("Area Triángulo") || prueba.equalsIgnoreCase("Área cadrado") 
+            }while (prueba.equalsIgnoreCase("Area Triángulo") || prueba.equalsIgnoreCase("Area cadrado") 
                     || prueba.equalsIgnoreCase("Dollar/euros") ||prueba.equalsIgnoreCase("Operaciones") ||
                     prueba.equalsIgnoreCase("Millas/Metros"));
     }      
